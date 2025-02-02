@@ -156,3 +156,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [snarkjs](https://github.com/iden3/snarkjs)
 - [Foundry](https://book.getfoundry.sh/)
 - The open-source community and projects that have inspired this work.
+  [Scroll](https://scroll.io/)
+  [Filosofía Código](https://www.youtube.com/c/FilosofiaCodigo)
+  [Succinct Labs](https://www.succinct.xyz/)
+  [Lagrange Labs](https://www.lagrange.dev/)
+  [zkBridge](https://www.zkbridge.com/)
+  [Herodotous](https://herodotus.dev/)
+  [=nil; Foundation](https://nil.foundation/)
