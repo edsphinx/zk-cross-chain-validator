@@ -78,6 +78,21 @@ Each use case is isolated in its own circuit, enabling independent development a
 3. **Set Up Circom and snarkjs:**
    Follow the [Circom installation guide](https://docs.circom.io/getting-started/installation/) to install Circom and snarkjs globally.
 
+## Folder Structure
+
+```bash
+ zk-cross-chain-validator/
+ ├── contracts/         # Contratos Solidity (por ejemplo, Verifier.sol)
+ ├── circuits/          # Archivos de los zk-circuits (ej. AccountBalanceProof.circom)
+ ├── script/            # Scripts de despliegue e integración (ej. deploy.s.sol, verifyProof.js)
+ ├── src/               # Scripts de despliegue e integración (ej. deploy.s.sol, verifyProof.js)
+ ├── tests/             # Pruebas unitarias (por ejemplo, tests con Foundry)
+ ├── docs/              # Documentación adicional y diagramas
+ ├── .gitignore         # Ignorar archivos innecesarios (Node, compilados, etc.)
+ ├── README.md          # Documentación principal del proyecto
+ └── package.json       # Dependencias y scripts de Node.js
+```
+
 ## Usage
 
 ### Off-Chain Proof Generation
