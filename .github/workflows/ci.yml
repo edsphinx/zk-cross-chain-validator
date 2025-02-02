@@ -17,11 +17,8 @@ jobs:
       - name: Install Node dependencies
         run: npm install
 
-      - name: Install Foundry
-        run: |
-          curl -L https://foundry.paradigm.xyz | bash
-          export PATH="$HOME/.foundry/bin:$PATH"
-          foundryup
+      - name: Setup Foundry
+        uses: foundry-rs/foundry-toolchain@v1
 
       - name: Run Foundry tests
         run: forge test
