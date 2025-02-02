@@ -1,4 +1,3 @@
-````markdown
 # zk-Cross-Chain Validator MVP
 
 A proof-of-concept project that demonstrates secure, privacy-preserving, and cost-effective cross-chain validation using zero-knowledge proofs (zk-SNARKs) on Layer 2. This MVP is built with a modular architecture to enable future expansion of data input use cases.
@@ -68,6 +67,7 @@ Each use case is isolated in its own circuit, enabling independent development a
    git clone https://github.com/edsphinx/zk-cross-chain-validator.git
    cd zk-cross-chain-validator
    ```
+
 ````
 
 2. **Install Dependencies:**
@@ -121,19 +121,19 @@ forge test
 
 With additional support, the project will evolve as follows:
 
-1. **Advanced Proof Aggregation:**  
+1. **Advanced Proof Aggregation:**
    Aggregate multiple zk proofs into a single succinct proof to lower on-chain verification costs.
 
-2. **Universal zk Verifier (WASM-Based):**  
+2. **Universal zk Verifier (WASM-Based):**
    Develop a WASM-based verifier for chain-agnostic proof validation.
 
-3. **Expanded Data Input Modules:**  
+3. **Expanded Data Input Modules:**
    Integrate additional modular circuits for new use cases (e.g., dynamic collateral adjustment, multi-token verification).
 
-4. **User Interface Development:**  
+4. **User Interface Development:**
    Build a dashboard for users to generate proofs, submit verifications, and monitor status.
 
-5. **Enhanced Security & Scalability:**  
+5. **Enhanced Security & Scalability:**
    Conduct comprehensive audits and optimize the system for production deployment.
 
 ## Contributing
@@ -154,3 +154,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ```
 
 ```
+````
