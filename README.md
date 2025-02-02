@@ -63,12 +63,11 @@ Each use case is isolated in its own circuit, enabling independent development a
 ## Installation
 
 1. **Clone the Repository:**
+
    ```bash
    git clone https://github.com/edsphinx/zk-cross-chain-validator.git
    cd zk-cross-chain-validator
    ```
-
-````
 
 2. **Install Dependencies:**
 
@@ -86,25 +85,32 @@ Each use case is isolated in its own circuit, enabling independent development a
 For each use case, compile the corresponding zk circuit. For example, for Account Balance Verification:
 
 1. **Compile the Circuit:**
+
    ```bash
    circom circuits/AccountBalanceProof.circom --r1cs --wasm --sym
    ```
+
 2. **Generate the Witness and Proof:**
+
    ```bash
    node circuits/AccountBalanceProof_js/generate_witness.js circuits/AccountBalanceProof_js/AccountBalanceProof.wasm input.json witness.wtns
    snarkjs groth16 prove circuits/AccountBalanceProof.r1cs pot12_final.ptau witness.wtns proof.json public.json
    ```
+
    Repeat similar steps for the other circuits.
 
 ### On-Chain Verification
 
 1. **Deploy the Verifier Contract:**
    Use Foundry to deploy the contract on Scroll Testnet:
+
    ```bash
    forge script script/DeployVerifier.s.sol --rpc-url <RPC_URL> --private-key <PRIVATE_KEY> --broadcast
    ```
+
 2. **Verify the Proof:**
    Run the integration script to submit the proof and public inputs:
+
    ```bash
    node scripts/verifyProof.js --contract <deployed_address> --proof proof.json --public public.json
    ```
@@ -150,8 +156,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [snarkjs](https://github.com/iden3/snarkjs)
 - [Foundry](https://book.getfoundry.sh/)
 - The open-source community and projects that have inspired this work.
-
-```
-
-```
-````
